@@ -1,0 +1,15 @@
+{
+  parserClass="com.aaronbedra.jetbrains.parser.CcsParser"
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+  psiClassPrefix="Ccs"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.aaronbedra.jetbrains.psi"
+  psiImplPackage="com.aaronbedra.jetbrains.psi.impl"
+  elementTypeHolderClass="com.aaronbedra.jetbrains.psi.CcsTypes"
+  elementTypeClass="com.aaronbedra.jetbrains.psi.CcsElementType"
+  tokenTypeClass="com.aaronbedra.jetbrains.psi.CcsTokenType"
+}
+
+ccsFile ::= item_*
+private item_ ::= (property|COMMENT|CRLF)
+property ::= (KEY? SEPARATOR VALUE?) | KEY
