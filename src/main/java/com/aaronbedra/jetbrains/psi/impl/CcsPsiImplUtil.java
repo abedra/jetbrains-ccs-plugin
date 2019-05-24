@@ -1,10 +1,15 @@
 package com.aaronbedra.jetbrains.psi.impl;
 
+import com.aaronbedra.jetbrains.CcsIcons;
 import com.aaronbedra.jetbrains.psi.CcsElementFactory;
 import com.aaronbedra.jetbrains.psi.CcsProperty;
 import com.aaronbedra.jetbrains.psi.CcsTypes;
 import com.intellij.lang.ASTNode;
+import com.intellij.navigation.ItemPresentation;
 import com.intellij.psi.PsiElement;
+import org.jetbrains.annotations.Nullable;
+
+import javax.swing.*;
 
 public class CcsPsiImplUtil {
     public static String getKey(CcsProperty element) {
@@ -46,5 +51,27 @@ public class CcsPsiImplUtil {
         } else {
             return null;
         }
+    }
+
+    public static ItemPresentation getPresentation(final CcsProperty element) {
+        return new ItemPresentation() {
+            @Nullable
+            @Override
+            public String getPresentableText() {
+                return element.getKey();
+            }
+
+            @Nullable
+            @Override
+            public String getLocationString() {
+                return element.getContainingFile().getName();
+            }
+
+            @Nullable
+            @Override
+            public Icon getIcon(boolean unused) {
+                return CcsIcons.FILE;
+            }
+        };
     }
 }

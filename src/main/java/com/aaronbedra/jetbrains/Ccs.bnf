@@ -20,4 +20,4 @@ ccsFile ::= item_*
 
 private item_ ::= (property|COMMENT|CRLF)
 
-property ::= (KEY? SEPARATOR VALUE?) | KEY {mixin="com.aaronbedra.jetbrains.psi.impl.CcsNamedElementImpl" implements="com.aaronbedra.jetbrains.psi.CcsNamedElement"methods=[getKey getValue getName setName getNameIdentifier]}
+property ::= (KEY? SEPARATOR VALUE?) | KEY {mixin="com.aaronbedra.jetbrains.psi.impl.CcsNamedElementImpl" implements="com.aaronbedra.jetbrains.psi.CcsNamedElement"methods=[getKey getValue getName setName getNameIdentifier getPresentation]}

@@ -20,6 +20,8 @@
         <psi.referenceContributor implementation="com.aaronbedra.jetbrains.CcsReferenceContributor"/>
         <lang.refactoringSupport language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsRefactoringSupportProvider"/>
         <lang.findUsagesProvider language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsFindUsagesProvider"/>
+        <lang.foldingBuilder language="JAVA" implementationClass="com.aaronbedra.jetbrains.CcsFoldingBuilder"/>
+        <gotoSymbolContributor implementation="com.aaronbedra.jetbrains.CcsChooseByNameContributor"/>
     </extensions>
 
     <actions>

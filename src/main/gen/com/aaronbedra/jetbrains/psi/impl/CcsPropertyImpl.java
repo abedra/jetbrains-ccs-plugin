@@ -9,6 +9,7 @@ import com.intellij.psi.PsiElementVisitor;
 import com.intellij.psi.util.PsiTreeUtil;
 import static com.aaronbedra.jetbrains.psi.CcsTypes.*;
 import com.aaronbedra.jetbrains.psi.*;
+import com.intellij.navigation.ItemPresentation;
 
 public class CcsPropertyImpl extends CcsNamedElementImpl implements CcsProperty {
 
@@ -48,6 +49,11 @@ public class CcsPropertyImpl extends CcsNamedElementImpl implements CcsProperty 
   @Override
   public PsiElement getNameIdentifier() {
     return CcsPsiImplUtil.getNameIdentifier(this);
+  }
+
+  @Override
+  public ItemPresentation getPresentation() {
+    return CcsPsiImplUtil.getPresentation(this);
   }
 
 }
