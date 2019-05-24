@@ -16,6 +16,7 @@
         <colorSettingsPage implementation="com.aaronbedra.jetbrains.CcsColorSettingsPage"/>
         <annotator language="JAVA" implementationClass="com.aaronbedra.jetbrains.CcsAnnotator"/>
         <codeInsight.lineMarkerProvider language="JAVA" implementationClass="com.aaronbedra.jetbrains.CcsLineMarkerProvider"/>
+        <completion.contributor language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsCompletionComtributor"/>
     </extensions>
 
     <actions>
