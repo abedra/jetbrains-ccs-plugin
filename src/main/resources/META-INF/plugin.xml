@@ -22,6 +22,7 @@
         <lang.findUsagesProvider language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsFindUsagesProvider"/>
         <lang.foldingBuilder language="JAVA" implementationClass="com.aaronbedra.jetbrains.CcsFoldingBuilder"/>
         <gotoSymbolContributor implementation="com.aaronbedra.jetbrains.CcsChooseByNameContributor"/>
+        <lang.psiStructureViewFactory language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsStructureViewFactory"/>
     </extensions>
 
     <actions>
