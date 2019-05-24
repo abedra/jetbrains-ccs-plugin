@@ -19,6 +19,7 @@
         <completion.contributor language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsCompletionComtributor"/>
         <psi.referenceContributor implementation="com.aaronbedra.jetbrains.CcsReferenceContributor"/>
         <lang.refactoringSupport language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsRefactoringSupportProvider"/>
+        <lang.findUsagesProvider language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsFindUsagesProvider"/>
     </extensions>
 
     <actions>
