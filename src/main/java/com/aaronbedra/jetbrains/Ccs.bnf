@@ -16,7 +16,7 @@
   psiImplUtilClass="com.aaronbedra.jetbrains.psi.impl.CcsPsiImplUtil"
 }
 
-simpleFile ::= item_*
+ccsFile ::= item_*
 
 private item_ ::= (property|COMMENT|CRLF)
 

@@ -34,7 +34,19 @@ public class CcsParser implements PsiParser, LightPsiParser {
   }
 
   protected boolean parse_root_(IElementType t, PsiBuilder b, int l) {
-    return simpleFile(b, l + 1);
+    return ccsFile(b, l + 1);
+  }
+
+  /* ********************************************************** */
+  // item_*
+  static boolean ccsFile(PsiBuilder b, int l) {
+    if (!recursion_guard_(b, l, "ccsFile")) return false;
+    while (true) {
+      int c = current_position_(b);
+      if (!item_(b, l + 1)) break;
+      if (!empty_element_parsed_guard_(b, "ccsFile", c)) break;
+    }
+    return true;
   }
 
   /* ********************************************************** */
@@ -84,18 +96,6 @@ public class CcsParser implements PsiParser, LightPsiParser {
   private static boolean property_0_2(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "property_0_2")) return false;
     consumeToken(b, VALUE);
-    return true;
-  }
-
-  /* ********************************************************** */
-  // item_*
-  static boolean simpleFile(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "simpleFile")) return false;
-    while (true) {
-      int c = current_position_(b);
-      if (!item_(b, l + 1)) break;
-      if (!empty_element_parsed_guard_(b, "simpleFile", c)) break;
-    }
     return true;
   }
 
