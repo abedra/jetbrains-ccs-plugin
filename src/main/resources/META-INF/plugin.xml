@@ -15,6 +15,7 @@
         <lang.syntaxHighlighterFactory language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsSyntaxHighlighterFactory"/>
         <colorSettingsPage implementation="com.aaronbedra.jetbrains.CcsColorSettingsPage"/>
         <annotator language="JAVA" implementationClass="com.aaronbedra.jetbrains.CcsAnnotator"/>
+        <codeInsight.lineMarkerProvider language="JAVA" implementationClass="com.aaronbedra.jetbrains.CcsLineMarkerProvider"/>
     </extensions>
 
     <actions>
