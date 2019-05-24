@@ -7,4 +7,8 @@ import com.intellij.psi.PsiElement;
 
 public interface CcsProperty extends PsiElement {
 
+  String getKey();
+
+  String getValue();
+
 }

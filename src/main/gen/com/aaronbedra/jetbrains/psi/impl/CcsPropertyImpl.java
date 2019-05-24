@@ -26,4 +26,14 @@ public class CcsPropertyImpl extends ASTWrapperPsiElement implements CcsProperty
     else super.accept(visitor);
   }
 
+  @Override
+  public String getKey() {
+    return CcsPsiImplUtil.getKey(this);
+  }
+
+  @Override
+  public String getValue() {
+    return CcsPsiImplUtil.getValue(this);
+  }
+
 }
