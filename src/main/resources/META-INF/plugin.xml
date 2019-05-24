@@ -17,6 +17,8 @@
         <annotator language="JAVA" implementationClass="com.aaronbedra.jetbrains.CcsAnnotator"/>
         <codeInsight.lineMarkerProvider language="JAVA" implementationClass="com.aaronbedra.jetbrains.CcsLineMarkerProvider"/>
         <completion.contributor language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsCompletionComtributor"/>
+        <psi.referenceContributor implementation="com.aaronbedra.jetbrains.CcsReferenceContributor"/>
+        <lang.refactoringSupport language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsRefactoringSupportProvider"/>
     </extensions>
 
     <actions>

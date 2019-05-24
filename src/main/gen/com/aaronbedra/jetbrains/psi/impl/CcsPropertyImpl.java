@@ -8,12 +8,11 @@ import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
 import com.intellij.psi.util.PsiTreeUtil;
 import static com.aaronbedra.jetbrains.psi.CcsTypes.*;
-import com.intellij.extapi.psi.ASTWrapperPsiElement;
 import com.aaronbedra.jetbrains.psi.*;
 
-public class CcsPropertyImpl extends ASTWrapperPsiElement implements CcsProperty {
+public class CcsPropertyImpl extends CcsNamedElementImpl implements CcsProperty {
 
-  public CcsPropertyImpl(@NotNull ASTNode node) {
+  public CcsPropertyImpl(ASTNode node) {
     super(node);
   }
 
@@ -34,6 +33,21 @@ public class CcsPropertyImpl extends ASTWrapperPsiElement implements CcsProperty
   @Override
   public String getValue() {
     return CcsPsiImplUtil.getValue(this);
+  }
+
+  @Override
+  public String getName() {
+    return CcsPsiImplUtil.getName(this);
+  }
+
+  @Override
+  public PsiElement setName(String newName) {
+    return CcsPsiImplUtil.setName(this, newName);
+  }
+
+  @Override
+  public PsiElement getNameIdentifier() {
+    return CcsPsiImplUtil.getNameIdentifier(this);
   }
 
 }
