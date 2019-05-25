@@ -23,6 +23,7 @@
         <lang.foldingBuilder language="JAVA" implementationClass="com.aaronbedra.jetbrains.CcsFoldingBuilder"/>
         <gotoSymbolContributor implementation="com.aaronbedra.jetbrains.CcsChooseByNameContributor"/>
         <lang.psiStructureViewFactory language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsStructureViewFactory"/>
+        <lang.formatter language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsFormattingModelBuilder"/>
     </extensions>
 
     <actions>

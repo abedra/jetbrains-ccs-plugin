@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 public class CcsStructureViewFactory implements PsiStructureViewFactory {
     @Nullable
     @Override
-    public StructureViewBuilder getStructureViewBuilder(final PsiFile psiFile) {
+    public StructureViewBuilder getStructureViewBuilder(@NotNull final PsiFile psiFile) {
         return new TreeBasedStructureViewBuilder() {
             @NotNull
             @Override
