@@ -24,6 +24,8 @@
         <gotoSymbolContributor implementation="com.aaronbedra.jetbrains.CcsChooseByNameContributor"/>
         <lang.psiStructureViewFactory language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsStructureViewFactory"/>
         <lang.formatter language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsFormattingModelBuilder"/>
+        <codeStyleSettingsProvider implementation="com.aaronbedra.jetbrains.CcsCodeStyleSettingsProvider"/>
+        <langCodeStyleSettingsProvider implementation="com.aaronbedra.jetbrains.CcsLanguageCodeStyleSettingsProvider"/>
     </extensions>
 
     <actions>
