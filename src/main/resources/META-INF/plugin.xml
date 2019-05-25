@@ -26,6 +26,7 @@
         <lang.formatter language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsFormattingModelBuilder"/>
         <codeStyleSettingsProvider implementation="com.aaronbedra.jetbrains.CcsCodeStyleSettingsProvider"/>
         <langCodeStyleSettingsProvider implementation="com.aaronbedra.jetbrains.CcsLanguageCodeStyleSettingsProvider"/>
+        <lang.commenter language="Ccs" implementationClass="com.aaronbedra.jetbrains.CcsCommenter"/>
     </extensions>
 
     <actions>
